@@ -23,34 +23,21 @@ int main(){
         scanf("%d",&arr[i]);
     }
 
-    printf("element pour cherch: ");
-    scanf("%d",&num);
-
-
-
-    
-
 
 
     int found = 0; 
     for (int i = 0; i < size; i++) {
-        if (num == arr[i]) {
-                printf("new value: ");
-                scanf("%d",&newNum);
-                arr[i]=newNum;
+        if (arr[i]%2 == 0) {
+                printf("%d ",arr[i]);
                 found = 1;
-                break; 
         }
     }
 
     if (!found) {
-        printf("%d does not exist in the array.\n", num);
+        printf("no pair nums.\n");
         return 0;
     }
 
-    for(int i=0;i<size;i++){
-        printf("element %d: ",arr[i]);
-    }
 
     return 0;
 }
